@@ -12,7 +12,7 @@ void main() {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
         while(resultSet.next()){
-            System.out.println(resultSet.getString("user_name"));
+            System.out.println(resultSet.getString("user_name") + " : " + resultSet.getString("password"));
         }
     } catch (SQLException e) {
         throw new RuntimeException(e);
